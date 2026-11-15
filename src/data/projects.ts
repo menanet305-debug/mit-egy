@@ -78,7 +78,7 @@ export const projects: Project[] = [
       img("1556742049-0cfed4f6a45d"),
     ],
     description:
-      "A multi-tenant payment orchestration SaaS platform handling $40M+ monthly transactions. Built with Next.js 16, Prisma, PostgreSQL, and Stripe Connect. Features include real-time fraud detection, multi-currency wallets, and a custom admin dashboard.",
+      "A multi-tenant payment orchestration SaaS platform. Built with Next.js 16, Prisma, PostgreSQL, and Stripe Connect. Features include fraud-detection hooks, multi-currency wallets, and a custom admin dashboard.",
     techStack: ["Next.js 16", "TypeScript", "Prisma", "PostgreSQL", "Stripe", "Redis", "AWS"],
     features: [
       "Multi-tenant architecture",
@@ -122,7 +122,7 @@ export const projects: Project[] = [
       img("1552566626-52f8b828add9"),
     ],
     description:
-      "A booking and loyalty app for a chain of 32 restaurants across the GCC. React Native + Supabase. Includes waitlist, table management, and rewards.",
+      "A booking and loyalty app for restaurant chains. React Native + Supabase. Includes waitlist, table management, and rewards.",
     techStack: ["React Native", "Supabase", "Stripe", "OneSignal"],
     features: [
       "Real-time waitlist",
@@ -166,7 +166,7 @@ export const projects: Project[] = [
       img("1558364225-3c8c87b9e3e7"),
     ],
     description:
-      "A headless e-commerce storefront for a regional fashion brand. Built on Medusa.js + Next.js 16 with Algolia search, Paymob checkout, and full Arabic/English RTL support. Conversion rate improved 38% post-launch.",
+      "A headless e-commerce storefront for a regional fashion brand. Built on Medusa.js + Next.js 16 with Algolia search, Paymob checkout, and full Arabic/English RTL support.",
     techStack: ["Next.js 16", "Medusa.js", "Algolia", "Paymob", "Tailwind CSS"],
     features: [
       "Headless commerce",
@@ -210,7 +210,7 @@ export const projects: Project[] = [
       img("1505751172876-fa1923c5c528"),
     ],
     description:
-      "A cross-platform mobile app for booking doctor appointments across 1,200+ clinics. Built with React Native + Expo + NestJS backend. Includes video consultations, e-prescriptions, and Arabic-first UX.",
+      "A cross-platform mobile app for booking doctor appointments across clinic networks. Built with React Native + Expo + NestJS backend. Includes video consultations, e-prescriptions, and Arabic-first UX.",
     techStack: ["React Native", "Expo", "NestJS", "PostgreSQL", "Twilio Video"],
     features: [
       "Cross-platform iOS + Android",
@@ -254,7 +254,7 @@ export const projects: Project[] = [
       img("1551288049-bebda4e38f71"),
     ],
     description:
-      "A real-time fleet tracking and analytics dashboard for a logistics company operating 1,500+ vehicles. Built with Next.js + WebSocket + TimescaleDB for sub-second GPS pings and historical analytics.",
+      "A real-time fleet tracking and analytics dashboard for logistics operators. Built with Next.js + WebSocket + TimescaleDB for live GPS pings and historical analytics.",
     techStack: ["Next.js 16", "WebSocket", "TimescaleDB", "Mapbox", "Redis"],
     features: [
       "Real-time GPS tracking",
@@ -298,7 +298,7 @@ export const projects: Project[] = [
       img("1497633762265-9d179a990aa6"),
     ],
     description:
-      "A comprehensive LMS platform with live classes, graded assignments, certificates, and instructor marketplaces. Built for MENA universities. Currently in beta with 5,000+ active learners.",
+      "A comprehensive LMS platform with live classes, graded assignments, certificates, and instructor marketplaces. Built for MENA universities. Currently in beta.",
     techStack: ["Next.js 16", "Prisma", "PostgreSQL", "WebRTC", "AWS"],
     features: [
       "Live HD classes",
@@ -342,7 +342,7 @@ export const projects: Project[] = [
       img("1545324418-cc1a3fa10c00"),
     ],
     description:
-      "A real estate listing platform with 8,000+ active listings, map-based search, agent dashboards, and lead management. Built with Next.js + Prisma + PostgreSQL + Algolia.",
+      "A real estate listing platform with map-based search, agent dashboards, and lead management. Built with Next.js + Prisma + PostgreSQL + Algolia.",
     techStack: ["Next.js 16", "Prisma", "PostgreSQL", "Algolia", "Mapbox"],
     features: [
       "Map-based search",
@@ -474,7 +474,7 @@ export const projects: Project[] = [
       img("1556761175-5973dc0f32e7"),
     ],
     description:
-      "A high-converting landing page for a B2B lead-gen SaaS. Implemented in 10 days, conversion rate 7.8% on cold traffic. Built with Next.js + Tailwind + Resend for inbound leads.",
+      "A conversion-focused landing page for a B2B lead-gen SaaS. Implemented in 10 days. Built with Next.js + Tailwind + Resend for inbound leads.",
     techStack: ["Next.js 16", "Tailwind CSS", "Resend"],
     features: [
       "A/B test ready",
@@ -518,10 +518,10 @@ export const projects: Project[] = [
       img("1555066931-536f49245819"),
     ],
     description:
-      "A high-throughput API gateway bridging a core banking system with modern fintech apps. Built with Fastify + TypeScript + gRPC. Handles 2,500 req/s with 99.97% uptime SLA.",
+      "A high-throughput API gateway bridging a core banking system with modern fintech apps. Built with Fastify + TypeScript + gRPC, with rate limiting, quotas, and audit logging.",
     techStack: ["Fastify", "TypeScript", "gRPC", "PostgreSQL", "Redis", "Kubernetes"],
     features: [
-      "2,500 req/s throughput",
+      "Horizontal scaling",
       "OAuth 2.0 + mTLS",
       "Rate limiting + quotas",
       "Audit logging",
@@ -694,7 +694,7 @@ export const projects: Project[] = [
       img("1504384308090-c894fdcc538d"),
     ],
     description:
-      "A smart city IoT dashboard aggregating 50,000+ sensors (air quality, traffic, waste, lighting) into one operations center. Built with Next.js + InfluxDB + Grafana-style custom charts.",
+      "A smart city IoT dashboard aggregating sensor feeds (air quality, traffic, waste, lighting) into one operations center. Built with Next.js + InfluxDB + Grafana-style custom charts.",
     techStack: ["Next.js 16", "InfluxDB", "TimescaleDB", "Mapbox", "MQTT"],
     features: [
       "50k+ sensor ingestion",
@@ -738,10 +738,9 @@ export const projects: Project[] = [
       img("1572949645846-8c6b3b5f7a95"),
     ],
     description:
-      "A high-traffic news portal serving 1.2M monthly visitors. Built with Next.js 16 + ISR for sub-second article updates + Algolia search + paywall.",
+      "A high-traffic news portal with paywall and subscriptions. Built with Next.js 16 + ISR for fast article updates + Algolia search.",
     techStack: ["Next.js 16", "Algolia", "Stripe", "Sanity CMS"],
     features: [
-      "1.2M monthly visitors",
       "ISR for live updates",
       "Paywall + subscriptions",
       "Algolia search",
@@ -782,10 +781,10 @@ export const projects: Project[] = [
       img("1518770660439-4636190af475"),
     ],
     description:
-      "An electronics store with 12,000 SKUs, configurator for custom PCs, and Tabby/Tamara BNPL integration. Built with Next.js + Medusa + Paymob.",
+      "An electronics store with a large SKU catalog, configurator for custom PCs, and Tabby/Tamara BNPL integration. Built with Next.js + Medusa + Paymob.",
     techStack: ["Next.js 16", "Medusa.js", "Paymob", "Tabby", "Tamara"],
     features: [
-      "12k SKUs catalog",
+      "Large SKU catalog",
       "PC configurator",
       "BNPL integration",
       "Warranty tracking",
@@ -826,7 +825,7 @@ export const projects: Project[] = [
       img("1551434678-e076c223a692"),
     ],
     description:
-      "A multi-tenant CRM SaaS with pipelines, automation, email tracking, and AI meeting notes. Currently in maintenance mode with monthly feature additions.",
+      "A multi-tenant CRM SaaS with pipelines, automation, email tracking, and AI-assisted meeting notes. Currently in maintenance mode with monthly feature additions.",
     techStack: ["Next.js 16", "Prisma", "PostgreSQL", "BullMQ", "OpenAI API"],
     features: [
       "Visual pipelines",
@@ -958,10 +957,10 @@ export const projects: Project[] = [
       img("1517245386807-bb43f82c33c4"),
     ],
     description:
-      "A citizen services portal integrating 50+ government services (IDs, licenses, certificates) with single sign-on and payment gateway. 3M+ users onboarded in first year.",
+      "A citizen services portal integrating government services (IDs, licenses, certificates) with single sign-on and payment gateway.",
     techStack: ["Next.js 16", "Prisma", "PostgreSQL", "Keycloak", "Kubernetes"],
     features: [
-      "50+ integrated services",
+      "Integrated services catalog",
       "SSO via Keycloak",
       "Payment gateway",
       "Digital signatures",
@@ -1002,7 +1001,7 @@ export const projects: Project[] = [
       img("1559526324-4b87b5e38582"),
     ],
     description:
-      "A waitlist landing page for a fintech startup. Built in 5 days, captured 8,000+ signups in the first month. Next.js + Tailwind + Resend.",
+      "A waitlist landing page for a fintech startup. Built in 5 days with referral codes and email capture. Next.js + Tailwind + Resend.",
     techStack: ["Next.js 16", "Tailwind CSS", "Resend"],
     features: [
       "Waitlist with referral codes",
@@ -1222,7 +1221,7 @@ export const projects: Project[] = [
       img("1504917595217-d4de517d2e25"),
     ],
     description:
-      "A B2B portal connecting 320 manufacturers with buyers. RFQ workflows, quality inspection dashboards, and ESCROW payments.",
+      "A B2B portal connecting manufacturers with buyers. RFQ workflows, quality inspection dashboards, and ESCROW payments.",
     techStack: ["Next.js 16", "Prisma", "PostgreSQL", "Stripe Connect"],
     features: [
       "RFQ workflow",
@@ -1266,7 +1265,7 @@ export const projects: Project[] = [
       img("1559339352-11d035aa65de"),
     ],
     description:
-      "A portfolio website for a Dubai restaurant group covering 6 venues. Menus, reservations, events, gift cards.",
+      "A portfolio website for a Dubai restaurant group covering multiple venues. Menus, reservations, events, gift cards.",
     techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "Sanity CMS"],
     features: [
       "6 venue microsites",
@@ -1310,7 +1309,7 @@ export const projects: Project[] = [
       img("1497366811353-6870744d04b2"),
     ],
     description:
-      "A marketing website for a real estate developer with 14 active projects. Includes interactive project pages, mortgage calculator, and lead capture.",
+      "A marketing website for a real estate developer with multiple active projects. Includes interactive project pages, mortgage calculator, and lead capture.",
     techStack: ["Next.js 16", "Tailwind CSS", "Sanity CMS", "Mapbox"],
     features: [
       "Project showcase",
@@ -1354,7 +1353,7 @@ export const projects: Project[] = [
       img("1601584115197-04ecc0da31d7"),
     ],
     description:
-      "A freight marketplace connecting shippers with 4,500+ carriers across the GCC. Real-time bidding, GPS tracking, and automated POD collection.",
+      "A freight marketplace connecting shippers with carriers across the GCC. Real-time bidding, GPS tracking, and automated POD collection.",
     techStack: ["Next.js 16", "Prisma", "PostgreSQL", "Mapbox", "Redis"],
     features: [
       "Real-time bidding",

@@ -30,7 +30,7 @@ export const testimonials: Testimonial[] = [
     city: "Cairo",
     country: "Egypt",
     rating: 5,
-    text: "Our conversion rate jumped 38% after launching the new Maza storefront. The team understood fashion retail deeply and the attention to detail was superb.",
+    text: "Our sales grew noticeably after launching the new Maza storefront. The team understood fashion retail deeply and the attention to detail was superb.",
   },
   {
     id: "t3",
@@ -40,7 +40,7 @@ export const testimonials: Testimonial[] = [
     city: "Riyadh",
     country: "Saudi Arabia",
     rating: 5,
-    text: "The Tabib app we built with MIT.egy now serves patients across 1,200+ clinics with reliable daily appointment booking. Reliability has been outstanding — we've never had a single P0 outage in 8 months.",
+    text: "The Tabib app we built with MIT.egy now serves patients across a growing clinic network with reliable daily appointment booking. Reliability has been outstanding — we've never had a single P0 outage in 8 months.",
   },
   {
     id: "t4",

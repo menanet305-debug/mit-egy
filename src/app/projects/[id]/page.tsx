@@ -168,6 +168,9 @@ export default function ProjectDetailPage({
                 {dict.projectDetail.overview}
               </h2>
               <p className="text-foreground/85 leading-relaxed">{project.description}</p>
+              <p className="mt-3 text-sm text-muted-foreground bg-muted/50 border border-border rounded-lg px-4 py-3">
+                {dict.projectDetail.note}
+              </p>
             </section>
 
             {/* Specifications */}

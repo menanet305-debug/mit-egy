@@ -42,7 +42,8 @@ export const en = {
   // Featured Projects
   featured: {
     title: "Featured Projects",
-    subtitle: "A selection of recent work across industries and tech stacks.",
+    subtitle:
+      "Sample builds showing what we can deliver — every project is shaped around the client's own requirements.",
     viewDetails: "View Details",
     viewAll: "View All Projects",
   },
@@ -87,7 +88,9 @@ export const en = {
   // Projects page
   projectsPage: {
     title: "Our Projects",
-    subtitle: "Browse our portfolio of delivered software — websites, web apps, mobile apps, and SaaS platforms.",
+    subtitle:
+      "Reference builds we deliver — each one can be tailored to your industry, requirements, and budget.",
+    note: "These are representative project blueprints. Scope, features, and timeline are defined together with each client based on their requirements.",
     filters: {
       title: "Filters",
       type: "Project Type",
@@ -152,6 +155,7 @@ export const en = {
     contactAgent: "Talk to the Project Manager",
     similarProjects: "Similar Projects",
     backToProjects: "Back to Projects",
+    note: "Reference blueprint — we build each project to the client's own specifications, requirements, and budget.",
     specs: {
       type: "Type",
       status: "Status",
@@ -406,7 +410,7 @@ export const en = {
     projects: {
       title: "Projects Portfolio | MIT.egy",
       description:
-        "Browse our portfolio of 100+ delivered software projects — websites, web apps, mobile apps, e-commerce, and SaaS platforms.",
+        "Explore our portfolio of software projects — websites, web apps, mobile apps, e-commerce, and SaaS platforms we can build and tailor to your requirements.",
     },
     services: {
       title: "Services | MIT.egy",

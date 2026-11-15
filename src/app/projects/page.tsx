@@ -144,6 +144,14 @@ function ProjectsContent() {
         </div>
       </section>
 
+      <div className="border-b border-border bg-muted/40">
+        <div className="container mx-auto px-4 md:px-6 py-3">
+          <p className="text-xs md:text-sm text-muted-foreground text-center">
+            {dict.projectsPage.note}
+          </p>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 md:px-6 py-8 md:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6 lg:gap-8">
           <aside className="lg:sticky lg:top-20 lg:self-start space-y-6 bg-background border border-border rounded-xl p-5">
