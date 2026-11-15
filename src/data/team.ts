@@ -47,12 +47,12 @@ export const teamRoles: TeamRole[] = [
     id: "devops",
     role: "DevOps & Cloud",
     bio: "Kubernetes and Terraform specialists. We migrate clients from VMs to K8s with zero downtime. AWS and GCP certified engineers.",
-    image: "https://images.unsplash.com/photo-1667372393114-3d12c62b73ab?w=400&h=400&fit=crop&fm=webp&q=70",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&fm=webp&q=70",
   },
   {
     id: "quality-assurance",
     role: "Quality Assurance",
     bio: "Test automation engineers who built our CI pipeline catching bugs pre-prod. ISTQB Advanced certified QA on every project.",
-    image: "https://images.unsplash.com/photo-1523474253041-331fe518076e?w=400&h=400&fit=crop&fm=webp&q=70",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=400&fit=crop&fm=webp&q=70",
   },
 ];
