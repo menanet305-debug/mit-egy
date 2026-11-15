@@ -30,7 +30,6 @@ import {
 } from "lucide-react";
 import { getProjectById, getSimilarProjects } from "@/data/projects";
 import { company } from "@/data/company";
-import { formatDate } from "@/lib/format";
 
 export default function ProjectDetailPage({
   params,
@@ -287,31 +286,6 @@ export default function ProjectDetailPage({
                     {dict.projectDetail.contactForm.submit}
                   </Button>
                 </form>
-              </CardContent>
-            </Card>
-
-            {/* Additional info */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base">{dict.projectDetail.additionalInfo}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">{dict.projectDetail.info.projectId}</span>
-                  <span className="font-mono text-xs">{project.id}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">{dict.projectDetail.info.publishedAt}</span>
-                  <span>{formatDate(project.createdAt, locale)}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">{dict.projectDetail.info.engagement}</span>
-                  <span>
-                    {project.engagement === "direct"
-                      ? dict.projectDetail.info.engagementDirect
-                      : dict.projectDetail.info.engagementAgency}
-                  </span>
-                </div>
               </CardContent>
             </Card>
           </aside>

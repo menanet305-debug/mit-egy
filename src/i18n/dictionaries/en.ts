@@ -151,7 +151,6 @@ export const en = {
     gallery: "Project Gallery",
     overview: "Overview",
     specifications: "Specifications",
-    additionalInfo: "Additional Information",
     contactAgent: "Talk to Us",
     similarProjects: "Similar Projects",
     backToProjects: "Back to Projects",
@@ -169,13 +168,6 @@ export const en = {
       features: "Key Features",
       pages: "Pages / Screens",
       languages: "Languages Supported",
-    },
-    info: {
-      projectId: "Project ID",
-      publishedAt: "Published On",
-      engagement: "Engagement Type",
-      engagementDirect: "Direct Contract",
-      engagementAgency: "Agency Subcontract",
     },
     contactForm: {
       title: "Quick Inquiry",
