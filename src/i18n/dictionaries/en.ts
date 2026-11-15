@@ -244,11 +244,7 @@ export const en = {
   blog: {
     title: "Engineering Blog",
     subtitle: "Insights, tutorials, and case studies from our engineering team.",
-    readMore: "Read More",
-    publishedOn: "Published on",
     minRead: "{n} min read",
-    back: "Back to Blog",
-    sharePost: "Share this Post",
   },
   // Contact page
   contact: {

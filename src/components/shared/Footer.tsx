@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useLocale } from "@/i18n/store";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { company } from "@/data/company";
-import { Code2, Phone, Mail, MapPin, Clock, Linkedin, Github, Twitter, Instagram } from "lucide-react";
+import { Code2, Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export function Footer() {
   const locale = useLocale();
@@ -22,13 +22,6 @@ export function Footer() {
 
   const serviceLinks = dict.services.list.slice(0, 4).map((s) => s.title);
 
-  const social = [
-    { href: company.social.linkedin, icon: Linkedin, label: "LinkedIn" },
-    { href: company.social.github, icon: Github, label: "GitHub" },
-    { href: company.social.twitter, icon: Twitter, label: "Twitter" },
-    { href: company.social.instagram, icon: Instagram, label: "Instagram" },
-  ];
-
   return (
     <footer className="mt-auto bg-brand-navy text-white">
       <div className="container mx-auto px-4 md:px-6 py-12">
@@ -44,20 +37,6 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-white/70 leading-relaxed">{dict.footer.about}</p>
-            <div className="flex gap-3">
-              {social.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-white/10 hover:bg-brand-gold hover:text-brand-navy transition-colors"
-                >
-                  <s.icon className="h-4 w-4" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Column 2: Quick links */}

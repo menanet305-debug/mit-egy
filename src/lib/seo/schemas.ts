@@ -1,6 +1,5 @@
 // JSON-LD structured data schemas
 import { company } from "@/data/company";
-import { blogPosts } from "@/data/blog";
 
 export function organizationSchema() {
   return {
@@ -89,37 +88,6 @@ export function faqPageSchema(questions: { q: string; a: string }[]) {
         text: q.a,
       },
     })),
-  };
-}
-
-export function blogPostingSchema(slug: string) {
-  const post = blogPosts.find((p) => p.slug === slug);
-  if (!post) return null;
-  return {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    image: post.coverImage,
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    author: {
-      "@type": "Person",
-      name: post.author,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "MIT.egy",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://mit-egy.vercel.app/logo.svg",
-      },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://mit-egy.vercel.app/blog/${post.slug}`,
-    },
-    keywords: post.tags.join(", "),
   };
 }
 

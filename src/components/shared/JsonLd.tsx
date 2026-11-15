@@ -6,13 +6,12 @@ import {
   websiteSchema,
   faqPageSchema,
   breadcrumbSchema,
-  blogPostingSchema,
 } from "@/lib/seo/schemas";
 import { getDictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
 
 interface Props {
-  type: "home" | "about" | "faq" | "project" | "blog";
+  type: "home" | "about" | "faq" | "project";
   locale?: Locale;
   slug?: string;
   breadcrumbItems?: { name: string; url: string }[];
@@ -42,11 +41,6 @@ export function JsonLd({ type, locale = "en", slug, breadcrumbItems }: Props) {
 
   if (type === "project" && slug && breadcrumbItems) {
     schemas.push(breadcrumbSchema(breadcrumbItems));
-  }
-
-  if (type === "blog" && slug) {
-    const schema = blogPostingSchema(slug);
-    if (schema) schemas.push(schema);
   }
 
   if (schemas.length === 0) return null;

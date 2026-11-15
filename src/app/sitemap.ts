@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
-import { blogPosts } from "@/data/blog";
 
 const BASE_URL = "https://mit-egy.vercel.app";
 
@@ -23,12 +22,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((b) => ({
-    url: `${BASE_URL}/blog/${b.slug}`,
-    lastModified: new Date(b.publishedAt),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
-
-  return [...staticRoutes, ...projectRoutes, ...blogRoutes];
+  return [...staticRoutes, ...projectRoutes];
 }
