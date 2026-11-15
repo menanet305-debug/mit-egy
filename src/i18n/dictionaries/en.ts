@@ -193,6 +193,10 @@ export const en = {
     stats: {
       title: "By the Numbers",
     },
+    team: {
+      title: "Meet the Team",
+      subtitle: "Senior engineers, designers, and product thinkers.",
+    },
     gallery: {
       title: "Behind the Scenes",
       subtitle: "A look at your workspace and projects",
