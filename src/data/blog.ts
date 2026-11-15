@@ -68,8 +68,8 @@ A well-scoped SaaS build with the right vendor is the best money a founder can s
     coverImage: img("1551288049-bebda4e38f71"),
     publishedAt: "2024-11-12",
     readingMinutes: 8,
-    author: "Ahmed Khaled",
-    authorRole: "Founder & CEO",
+    author: "MIT.egy Team",
+    authorRole: "Software Engineering Studio",
     tags: ["saas", "founders", "contracts"],
   },
   {
@@ -111,8 +111,8 @@ If you're a software founder in MENA, you're operating in one of the world's mos
     coverImage: img("1460925895917-afdab827c52f"),
     publishedAt: "2024-10-28",
     readingMinutes: 7,
-    author: "Salma Nabil",
-    authorRole: "CTO",
+    author: "MIT.egy Team",
+    authorRole: "Software Engineering Studio",
     tags: ["markets", "startups", "mena"],
   },
   {
@@ -150,8 +150,8 @@ If a vendor passes all 5 of these questions, you have a real engineering partner
     coverImage: img("1556761175-4b46a572b786"),
     publishedAt: "2024-10-10",
     readingMinutes: 5,
-    author: "Ahmed Khaled",
-    authorRole: "Founder & CEO",
+    author: "MIT.egy Team",
+    authorRole: "Software Engineering Studio",
     tags: ["vendors", "evaluation", "contracts"],
   },
   {
@@ -201,8 +201,8 @@ We submit to both stores, write store copy, prepare screenshots, and handle revi
     coverImage: img("1559028012-481c04fa702d"),
     publishedAt: "2024-09-22",
     readingMinutes: 6,
-    author: "Yousef Hassan",
-    authorRole: "Mobile Lead",
+    author: "MIT.egy Team",
+    authorRole: "Software Engineering Studio",
     tags: ["mobile", "process", "delivery"],
   },
 ];

@@ -6,7 +6,7 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import { SiteShell } from "@/components/shared/SiteShell";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Users, Award, Rocket, Globe } from "lucide-react";
-import { team } from "@/data/team";
+import { teamRoles } from "@/data/team";
 import { company } from "@/data/company";
 
 export default function AboutPage() {
@@ -127,12 +127,12 @@ export default function AboutPage() {
             <p className="text-muted-foreground">{dict.about.team.subtitle}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member) => (
+            {teamRoles.map((member) => (
               <Card key={member.id} className="overflow-hidden hover:shadow-md transition-shadow">
                 <div className="aspect-square bg-muted">
                   <Image
                     src={member.image}
-                    alt={member.name}
+                    alt={member.role}
                     width={400}
                     height={400}
                     className="object-cover w-full h-full"
@@ -141,10 +141,9 @@ export default function AboutPage() {
                 </div>
                 <CardContent className="p-4">
                   <h3 className="font-heading text-base font-semibold text-brand-navy">
-                    {member.name}
+                    {member.role}
                   </h3>
-                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">{member.role}</p>
-                  <p className="text-xs text-muted-foreground line-clamp-3">{member.bio}</p>
+                  <p className="text-xs text-muted-foreground line-clamp-3 mt-2">{member.bio}</p>
                 </CardContent>
               </Card>
             ))}

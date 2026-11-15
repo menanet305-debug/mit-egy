@@ -152,7 +152,7 @@ export const en = {
     overview: "Overview",
     specifications: "Specifications",
     additionalInfo: "Additional Information",
-    contactAgent: "Talk to the Project Manager",
+    contactAgent: "Talk to Us",
     similarProjects: "Similar Projects",
     backToProjects: "Back to Projects",
     note: "Reference blueprint — we build each project to the client's own specifications, requirements, and budget.",

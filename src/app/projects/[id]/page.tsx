@@ -226,30 +226,20 @@ export default function ProjectDetailPage({
 
           {/* Sidebar */}
           <aside className="space-y-4 lg:sticky lg:top-20 lg:self-start">
-            {/* Contact agent */}
+            {/* Contact card */}
             <Card>
               <CardHeader>
                 <CardTitle className="text-base">{dict.projectDetail.contactAgent}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-navy text-brand-gold font-semibold">
-                    {project.agent.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-semibold text-sm">{project.agent.name}</p>
-                    <p className="text-xs text-muted-foreground">{project.agent.role}</p>
-                  </div>
-                </div>
-
                 <div className="space-y-2">
-                  <a href={`tel:${project.agent.phone}`} className="flex items-center gap-2 text-sm hover:text-brand-gold">
+                  <a href={`tel:${company.phone}`} className="flex items-center gap-2 text-sm hover:text-brand-gold">
                     <Phone className="h-4 w-4 text-brand-gold" aria-hidden="true" />
-                    <span dir="ltr">{project.agent.phone}</span>
+                    <span dir="ltr">{company.phone}</span>
                   </a>
-                  <a href={`mailto:${project.agent.email}`} className="flex items-center gap-2 text-sm hover:text-brand-gold">
+                  <a href={`mailto:${company.email}`} className="flex items-center gap-2 text-sm hover:text-brand-gold">
                     <MessageCircle className="h-4 w-4 text-brand-gold" aria-hidden="true" />
-                    {project.agent.email}
+                    {company.email}
                   </a>
                 </div>
 
