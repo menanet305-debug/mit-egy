@@ -31,8 +31,6 @@ export interface Project {
   lng: number;
   images: string[];
   description: string;
-  techStack: string[];
-  features: string[];
   pagesScreens: number;
   languagesSupported: string[];
   engagement: "direct" | "agency";
@@ -70,15 +68,6 @@ export const projects: Project[] = [
     ],
     description:
       "A multi-tenant payment orchestration SaaS platform. Built with Next.js 16, Prisma, PostgreSQL, and Stripe Connect. Features include fraud-detection hooks, multi-currency wallets, and a custom admin dashboard.",
-    techStack: ["Next.js 16", "TypeScript", "Prisma", "PostgreSQL", "Stripe", "Redis", "AWS"],
-    features: [
-      "Multi-tenant architecture",
-      "Real-time fraud detection",
-      "Multi-currency wallets",
-      "Admin dashboard",
-      "Stripe Connect integration",
-      "Webhook reliability layer",
-    ],
     pagesScreens: 42,
     languagesSupported: ["en", "ar"],
     engagement: "direct",
@@ -107,15 +96,6 @@ export const projects: Project[] = [
     ],
     description:
       "A booking and loyalty app for restaurant chains. React Native + Supabase. Includes waitlist, table management, and rewards.",
-    techStack: ["React Native", "Supabase", "Stripe", "OneSignal"],
-    features: [
-      "Real-time waitlist",
-      "Table management",
-      "Loyalty rewards",
-      "Push notifications",
-      "Multi-restaurant switch",
-      "Apple/Google Pay",
-    ],
     pagesScreens: 22,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -144,15 +124,6 @@ export const projects: Project[] = [
     ],
     description:
       "A headless e-commerce storefront for a regional fashion brand. Built on Medusa.js + Next.js 16 with Algolia search, Paymob checkout, and full Arabic/English RTL support.",
-    techStack: ["Next.js 16", "Medusa.js", "Algolia", "Paymob", "Tailwind CSS"],
-    features: [
-      "Headless commerce",
-      "Algolia instant search",
-      "Paymob + Fawry checkout",
-      "RTL bilingual UI",
-      "Wishlist + reviews",
-      "Instagram shopping feed",
-    ],
     pagesScreens: 28,
     languagesSupported: ["en", "ar"],
     engagement: "direct",
@@ -181,15 +152,6 @@ export const projects: Project[] = [
     ],
     description:
       "A cross-platform mobile app for booking doctor appointments across clinic networks. Built with React Native + Expo + NestJS backend. Includes video consultations, e-prescriptions, and Arabic-first UX.",
-    techStack: ["React Native", "Expo", "NestJS", "PostgreSQL", "Twilio Video"],
-    features: [
-      "Cross-platform iOS + Android",
-      "Video consultations",
-      "E-prescriptions",
-      "Push notifications",
-      "Insurance integration",
-      "Arabic-first UX",
-    ],
     pagesScreens: 35,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -218,15 +180,6 @@ export const projects: Project[] = [
     ],
     description:
       "A real-time fleet tracking and analytics dashboard for logistics operators. Built with Next.js + WebSocket + TimescaleDB for live GPS pings and historical analytics.",
-    techStack: ["Next.js 16", "WebSocket", "TimescaleDB", "Mapbox", "Redis"],
-    features: [
-      "Real-time GPS tracking",
-      "Heat maps",
-      "Driver behavior scoring",
-      "Route optimization",
-      "Fuel analytics",
-      "Custom alerting",
-    ],
     pagesScreens: 18,
     languagesSupported: ["en", "ar"],
     engagement: "direct",
@@ -255,15 +208,6 @@ export const projects: Project[] = [
     ],
     description:
       "A comprehensive LMS platform with live classes, graded assignments, certificates, and instructor marketplaces. Built for MENA universities. Currently in beta.",
-    techStack: ["Next.js 16", "Prisma", "PostgreSQL", "WebRTC", "AWS"],
-    features: [
-      "Live HD classes",
-      "Auto-graded quizzes",
-      "Issued certificates",
-      "Instructor marketplace",
-      "Discussion forums",
-      "Mobile companion app",
-    ],
     pagesScreens: 52,
     languagesSupported: ["ar", "en", "fr"],
     engagement: "direct",
@@ -292,15 +236,6 @@ export const projects: Project[] = [
     ],
     description:
       "A real estate listing platform with map-based search, agent dashboards, and lead management. Built with Next.js + Prisma + PostgreSQL + Algolia.",
-    techStack: ["Next.js 16", "Prisma", "PostgreSQL", "Algolia", "Mapbox"],
-    features: [
-      "Map-based search",
-      "Agent CRM",
-      "Saved searches alerts",
-      "Mortgage calculator",
-      "Virtual tours",
-      "Lead scoring",
-    ],
     pagesScreens: 24,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -329,15 +264,6 @@ export const projects: Project[] = [
     ],
     description:
       "A fast, animated portfolio website for a Berlin creative studio. Built with Next.js 16, smooth CSS-driven motion, and a strict performance budget.",
-    techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "Sanity CMS"],
-    features: [
-      "Custom motion design",
-      "Headless CMS",
-      "Performance budgeted",
-      "Case study filtering",
-      "Contact form",
-      "Blog",
-    ],
     pagesScreens: 16,
     languagesSupported: ["en", "de"],
     engagement: "direct",
@@ -366,15 +292,6 @@ export const projects: Project[] = [
     ],
     description:
       "A multi-tenant HR SaaS with employee onboarding, payroll, leave management, performance reviews, and analytics. Built with Next.js + Prisma + PostgreSQL + BullMQ for background jobs.",
-    techStack: ["Next.js 16", "Prisma", "PostgreSQL", "BullMQ", "Redis"],
-    features: [
-      "Employee onboarding flows",
-      "Payroll engine",
-      "Leave management",
-      "Performance reviews",
-      "Org chart",
-      "Custom reports",
-    ],
     pagesScreens: 38,
     languagesSupported: ["en", "ar"],
     engagement: "direct",
@@ -403,15 +320,6 @@ export const projects: Project[] = [
     ],
     description:
       "A conversion-focused landing page for a B2B lead-gen SaaS. Implemented in 10 days. Built with Next.js + Tailwind + Resend for inbound leads.",
-    techStack: ["Next.js 16", "Tailwind CSS", "Resend"],
-    features: [
-      "A/B test ready",
-      "Fast < 1s LCP",
-      "Lead magnet form",
-      "Calendar embed",
-      "Testimonial carousel",
-      "Pricing table",
-    ],
     pagesScreens: 1,
     languagesSupported: ["en"],
     engagement: "direct",
@@ -440,15 +348,6 @@ export const projects: Project[] = [
     ],
     description:
       "A high-throughput API gateway bridging a core banking system with modern fintech apps. Built with Fastify + TypeScript + gRPC, with rate limiting, quotas, and audit logging.",
-    techStack: ["Fastify", "TypeScript", "gRPC", "PostgreSQL", "Redis", "Kubernetes"],
-    features: [
-      "Horizontal scaling",
-      "OAuth 2.0 + mTLS",
-      "Rate limiting + quotas",
-      "Audit logging",
-      "API versioning",
-      "OpenAPI docs",
-    ],
     pagesScreens: 0,
     languagesSupported: [],
     engagement: "direct",
@@ -477,15 +376,6 @@ export const projects: Project[] = [
     ],
     description:
       "An end-to-end grocery delivery platform with customer app, picker app, and admin dashboard. Built with Next.js + React Native + Postgres + Redis geospatial.",
-    techStack: ["Next.js 16", "React Native", "PostgreSQL", "Redis", "Mapbox"],
-    features: [
-      "Customer web + app",
-      "Picker mobile app",
-      "Admin dashboard",
-      "Live order tracking",
-      "Substitutions",
-      "Slot booking",
-    ],
     pagesScreens: 40,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -514,15 +404,6 @@ export const projects: Project[] = [
     ],
     description:
       "A bilingual (AR/EN) professional website for a leading law firm. Areas of practice, attorney profiles, insights blog, and confidential intake forms.",
-    techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "Sanity CMS"],
-    features: [
-      "Bilingual AR/EN",
-      "Practice areas",
-      "Attorney profiles",
-      "Insights blog",
-      "Confidential intake",
-      "Search",
-    ],
     pagesScreens: 14,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -551,15 +432,6 @@ export const projects: Project[] = [
     ],
     description:
       "An MVP freelancer marketplace with escrow payments, skill verification, and chat. Built for a Tunisian startup to validate their market thesis in 9 weeks.",
-    techStack: ["Next.js 16", "Prisma", "PostgreSQL", "Stripe Connect", "Socket.io"],
-    features: [
-      "Escrow payments",
-      "Skill verification",
-      "Real-time chat",
-      "Dispute resolution",
-      "Review system",
-      "Admin moderation",
-    ],
     pagesScreens: 26,
     languagesSupported: ["ar", "en", "fr"],
     engagement: "direct",
@@ -588,15 +460,6 @@ export const projects: Project[] = [
     ],
     description:
       "A smart city IoT dashboard aggregating sensor feeds (air quality, traffic, waste, lighting) into one operations center. Built with Next.js + InfluxDB + Grafana-style custom charts.",
-    techStack: ["Next.js 16", "InfluxDB", "TimescaleDB", "Mapbox", "MQTT"],
-    features: [
-      "50k+ sensor ingestion",
-      "Real-time alerts",
-      "Geospatial heatmaps",
-      "Historical analytics",
-      "Ops center display",
-      "Role-based access",
-    ],
     pagesScreens: 22,
     languagesSupported: ["ar", "en"],
     engagement: "agency",
@@ -625,14 +488,6 @@ export const projects: Project[] = [
     ],
     description:
       "A high-traffic news portal with paywall and subscriptions. Built with Next.js 16 + ISR for fast article updates + Algolia search.",
-    techStack: ["Next.js 16", "Algolia", "Stripe", "Sanity CMS"],
-    features: [
-      "ISR for live updates",
-      "Paywall + subscriptions",
-      "Algolia search",
-      "Newsletter",
-      "Comment moderation",
-    ],
     pagesScreens: 20,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -661,15 +516,6 @@ export const projects: Project[] = [
     ],
     description:
       "An electronics store with a large SKU catalog, configurator for custom PCs, and Tabby/Tamara BNPL integration. Built with Next.js + Medusa + Paymob.",
-    techStack: ["Next.js 16", "Medusa.js", "Paymob", "Tabby", "Tamara"],
-    features: [
-      "Large SKU catalog",
-      "PC configurator",
-      "BNPL integration",
-      "Warranty tracking",
-      "AR product preview",
-      "Loyalty points",
-    ],
     pagesScreens: 32,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -698,15 +544,6 @@ export const projects: Project[] = [
     ],
     description:
       "A multi-tenant CRM SaaS with pipelines, automation, email tracking, and AI-assisted meeting notes. Currently in maintenance mode with monthly feature additions.",
-    techStack: ["Next.js 16", "Prisma", "PostgreSQL", "BullMQ", "OpenAI API"],
-    features: [
-      "Visual pipelines",
-      "Workflow automation",
-      "Email tracking",
-      "AI meeting notes",
-      "Mobile app",
-      "API + Zapier",
-    ],
     pagesScreens: 45,
     languagesSupported: ["en", "ar", "fr"],
     engagement: "direct",
@@ -735,15 +572,6 @@ export const projects: Project[] = [
     ],
     description:
       "A travel booking platform for flights, hotels, and experiences across the GCC. Built with Next.js + Amadeus API + Stripe + custom itinerary builder.",
-    techStack: ["Next.js 16", "Amadeus", "Stripe", "PostgreSQL", "Redis"],
-    features: [
-      "Flight search",
-      "Hotel booking",
-      "Experiences marketplace",
-      "Itinerary builder",
-      "Group bookings",
-      "Travel insurance",
-    ],
     pagesScreens: 30,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -772,15 +600,6 @@ export const projects: Project[] = [
     ],
     description:
       "A gamified learning app for kids aged 4-10 covering math, Arabic, and English. React Native + Firebase. Parent dashboard included.",
-    techStack: ["React Native", "Firebase", "Lottie", "Stripe"],
-    features: [
-      "Gamified lessons",
-      "Parent dashboard",
-      "Offline mode",
-      "Achievement system",
-      "Voice narration",
-      "Subscription billing",
-    ],
     pagesScreens: 28,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -809,15 +628,6 @@ export const projects: Project[] = [
     ],
     description:
       "A citizen services portal integrating government services (IDs, licenses, certificates) with single sign-on and payment gateway.",
-    techStack: ["Next.js 16", "Prisma", "PostgreSQL", "Keycloak", "Kubernetes"],
-    features: [
-      "Integrated services catalog",
-      "SSO via Keycloak",
-      "Payment gateway",
-      "Digital signatures",
-      "Document vault",
-      "Multilingual",
-    ],
     pagesScreens: 60,
     languagesSupported: ["ar", "en"],
     engagement: "agency",
@@ -846,15 +656,6 @@ export const projects: Project[] = [
     ],
     description:
       "A waitlist landing page for a fintech startup. Built in 5 days with referral codes and email capture. Next.js + Tailwind + Resend.",
-    techStack: ["Next.js 16", "Tailwind CSS", "Resend"],
-    features: [
-      "Waitlist with referral codes",
-      "Email capture",
-      "Social proof",
-      "Coming soon countdown",
-      "Multilingual",
-      "Analytics",
-    ],
     pagesScreens: 1,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -883,15 +684,6 @@ export const projects: Project[] = [
     ],
     description:
       "A real-time recommendation engine API serving 4 e-commerce and media clients. Built with Python + FastAPI + scikit-learn + Redis cache layer.",
-    techStack: ["Python", "FastAPI", "scikit-learn", "Redis", "Docker"],
-    features: [
-      "Real-time inference",
-      "Collaborative filtering",
-      "Content-based filtering",
-      "A/B testing hooks",
-      "Multi-tenant",
-      "Usage metering",
-    ],
     pagesScreens: 0,
     languagesSupported: [],
     engagement: "direct",
@@ -920,15 +712,6 @@ export const projects: Project[] = [
     ],
     description:
       "A cosmetics e-commerce store with shade finder quiz, AR makeup try-on, and influencer affiliate program. Next.js + Shopify Hydrogen.",
-    techStack: ["Next.js 16", "Shopify Hydrogen", "8th Wall AR", "Algolia"],
-    features: [
-      "Shade finder quiz",
-      "AR makeup try-on",
-      "Influencer affiliate",
-      "Subscription refills",
-      "Loyalty tiering",
-      "Reviews + photos",
-    ],
     pagesScreens: 24,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -957,15 +740,6 @@ export const projects: Project[] = [
     ],
     description:
       "A donation platform supporting 12 vetted causes with recurring donations, gift aid, and transparent fund tracking. Next.js + Stripe + Sanity CMS.",
-    techStack: ["Next.js 16", "Stripe", "Sanity CMS", "PostgreSQL"],
-    features: [
-      "Recurring donations",
-      "Gift aid",
-      "Cause vetting workflow",
-      "Impact reports",
-      "Donor dashboard",
-      "Multi-currency",
-    ],
     pagesScreens: 18,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -994,15 +768,6 @@ export const projects: Project[] = [
     ],
     description:
       "A fitness app with workout plans, nutrition tracking, Apple Health/Google Fit sync, and a community feed. React Native + Supabase.",
-    techStack: ["React Native", "Supabase", "Apple HealthKit", "Google Fit"],
-    features: [
-      "Workout plans",
-      "Nutrition tracking",
-      "Health sync",
-      "Community feed",
-      "Personal coach chat",
-      "Wearable integration",
-    ],
     pagesScreens: 32,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -1031,15 +796,6 @@ export const projects: Project[] = [
     ],
     description:
       "A B2B portal connecting manufacturers with buyers. RFQ workflows, quality inspection dashboards, and ESCROW payments.",
-    techStack: ["Next.js 16", "Prisma", "PostgreSQL", "Stripe Connect"],
-    features: [
-      "RFQ workflow",
-      "Quality inspection",
-      "Escrow payments",
-      "Supplier verification",
-      "Order tracking",
-      "Custom catalog builder",
-    ],
     pagesScreens: 36,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -1068,15 +824,6 @@ export const projects: Project[] = [
     ],
     description:
       "A portfolio website for a Dubai restaurant group covering multiple venues. Menus, reservations, events, gift cards.",
-    techStack: ["Next.js 16", "TypeScript", "Tailwind CSS", "Sanity CMS"],
-    features: [
-      "6 venue microsites",
-      "Menu management",
-      "Reservation widget",
-      "Events calendar",
-      "Gift cards",
-      "Instagram feed",
-    ],
     pagesScreens: 18,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -1105,15 +852,6 @@ export const projects: Project[] = [
     ],
     description:
       "A marketing website for a real estate developer with multiple active projects. Includes interactive project pages, mortgage calculator, and lead capture.",
-    techStack: ["Next.js 16", "Tailwind CSS", "Sanity CMS", "Mapbox"],
-    features: [
-      "Project showcase",
-      "Interactive maps",
-      "Mortgage calculator",
-      "Lead capture",
-      "Virtual tours",
-      "Agent portal",
-    ],
     pagesScreens: 22,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -1142,15 +880,6 @@ export const projects: Project[] = [
     ],
     description:
       "A freight marketplace connecting shippers with carriers across the GCC. Real-time bidding, GPS tracking, and automated POD collection.",
-    techStack: ["Next.js 16", "Prisma", "PostgreSQL", "Mapbox", "Redis"],
-    features: [
-      "Real-time bidding",
-      "GPS tracking",
-      "Automated POD",
-      "Carrier verification",
-      "Invoicing",
-      "Analytics",
-    ],
     pagesScreens: 34,
     languagesSupported: ["ar", "en"],
     engagement: "direct",
@@ -1181,10 +910,6 @@ export function getSimilarProjects(project: Project, limit = 3): Project[] {
 export function getAllProjectSlugs(): string[] {
   return projects.map((p) => p.id);
 }
-
-export const allTechStacks: string[] = Array.from(
-  new Set(projects.flatMap((p) => p.techStack))
-).sort();
 
 export const allIndustries: string[] = Array.from(
   new Set(projects.map((p) => p.industry))

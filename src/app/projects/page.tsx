@@ -20,7 +20,6 @@ import {
 import { Filter, X } from "lucide-react";
 import {
   projects,
-  allTechStacks,
   allIndustries,
   type ProjectType,
   type ProjectStatus,
@@ -52,7 +51,6 @@ function ProjectsContent() {
     return t && PROJECT_TYPES.includes(t as ProjectType) ? [t as ProjectType] : [];
   });
   const [statuses, setStatusesState] = useState<ProjectStatus[]>([]);
-  const [techStack, setTechStackState] = useState<string>("any");
   const [industry, setIndustryState] = useState<string>(() => searchParams.get("industry") ?? "any");
   const [teamMin, setTeamMinState] = useState<string>("1");
   const [sort, setSortState] = useState<string>("newest");
@@ -65,10 +63,6 @@ function ProjectsContent() {
   };
   const setStatuses = (v: ProjectStatus[] | ((prev: ProjectStatus[]) => ProjectStatus[])) => {
     setStatusesState(v);
-    setPage(1);
-  };
-  const setTechStack = (v: string) => {
-    setTechStackState(v);
     setPage(1);
   };
   const setIndustry = (v: string) => {
@@ -88,7 +82,6 @@ function ProjectsContent() {
     let list = projects.filter((p) => {
       if (types.length > 0 && !types.includes(p.type)) return false;
       if (statuses.length > 0 && !statuses.includes(p.status)) return false;
-      if (techStack !== "any" && !p.techStack.includes(techStack)) return false;
       if (industry !== "any" && p.industry !== industry) return false;
       if (parseInt(teamMin, 10) > p.teamSize) return false;
       return true;
@@ -105,7 +98,7 @@ function ProjectsContent() {
     });
 
     return list;
-  }, [types, statuses, techStack, industry, teamMin, sort]);
+  }, [types, statuses, industry, teamMin, sort]);
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
   const pageItems = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
@@ -120,7 +113,6 @@ function ProjectsContent() {
   const clearFilters = () => {
     setTypes([]);
     setStatuses([]);
-    setTechStack("any");
     setIndustry("any");
     setTeamMin("1");
     setSort("newest");
@@ -129,7 +121,6 @@ function ProjectsContent() {
   const hasActiveFilters =
     types.length > 0 ||
     statuses.length > 0 ||
-    techStack !== "any" ||
     industry !== "any" ||
     teamMin !== "1";
 
@@ -217,25 +208,6 @@ function ProjectsContent() {
                   );
                 })}
               </div>
-            </div>
-
-            <div className="space-y-2">
-              <h3 className="text-xs font-semibold uppercase text-muted-foreground">
-                {dict.projectsPage.filters.techStack}
-              </h3>
-              <Select value={techStack} onValueChange={setTechStack}>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder={dict.common.all} />
-                </SelectTrigger>
-                <SelectContent className="max-h-72">
-                  <SelectItem value="any">{dict.common.all}</SelectItem>
-                  {allTechStacks.map((t) => (
-                    <SelectItem key={t} value={t}>
-                      {t}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
             </div>
 
             <div className="space-y-2">

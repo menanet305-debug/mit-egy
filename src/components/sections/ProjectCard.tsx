@@ -79,20 +79,6 @@ export function ProjectCard({ project }: { project: Project }) {
             <span className="font-semibold">{project.teamSize}</span>
           </div>
         </div>
-
-        {/* Tech stack */}
-        <div className="flex flex-wrap gap-1">
-          {project.techStack.slice(0, 3).map((t) => (
-            <Badge key={t} variant="secondary" className="text-[10px] font-normal">
-              {t}
-            </Badge>
-          ))}
-          {project.techStack.length > 3 && (
-            <Badge variant="secondary" className="text-[10px] font-normal">
-              +{project.techStack.length - 3}
-            </Badge>
-          )}
-        </div>
       </CardContent>
 
       <CardFooter className="p-4 pt-0">

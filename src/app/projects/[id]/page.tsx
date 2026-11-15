@@ -192,35 +192,6 @@ export default function ProjectDetailPage({
                 ))}
               </div>
             </section>
-
-            {/* Tech stack */}
-            <section>
-              <h2 className="font-heading text-xl font-bold text-brand-navy mb-3">
-                {dict.projectDetail.specs.techStack}
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.map((t) => (
-                  <Badge key={t} variant="secondary" className="text-sm py-1.5 px-3">
-                    {t}
-                  </Badge>
-                ))}
-              </div>
-            </section>
-
-            {/* Features */}
-            <section>
-              <h2 className="font-heading text-xl font-bold text-brand-navy mb-3">
-                {dict.projectDetail.specs.features}
-              </h2>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {project.features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-brand-success flex-shrink-0 mt-0.5" aria-hidden="true" />
-                    <span className="text-sm">{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
           </div>
 
           {/* Sidebar */}
