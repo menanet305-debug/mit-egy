@@ -1,0 +1,34 @@
+import type { MetadataRoute } from "next";
+import { projects } from "@/data/projects";
+import { blogPosts } from "@/data/blog";
+
+const BASE_URL = "https://mit-egy.vercel.app";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticRoutes: MetadataRoute.Sitemap = [
+    { url: BASE_URL, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
+    { url: `${BASE_URL}/projects`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE_URL}/services`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE_URL}/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+    { url: `${BASE_URL}/terms`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+  ];
+
+  const projectRoutes: MetadataRoute.Sitemap = projects.map((p) => ({
+    url: `${BASE_URL}/projects/${p.id}`,
+    lastModified: new Date(p.createdAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((b) => ({
+    url: `${BASE_URL}/blog/${b.slug}`,
+    lastModified: new Date(b.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...projectRoutes, ...blogRoutes];
+}
