@@ -5,8 +5,7 @@ import { useLocale } from "@/i18n/store";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { SiteShell } from "@/components/shared/SiteShell";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Users, Award, Rocket, Globe } from "lucide-react";
-import { teamRoles } from "@/data/team";
+import { Target, Eye, Rocket, Globe } from "lucide-react";
 import { company } from "@/data/company";
 
 export default function AboutPage() {
@@ -113,40 +112,6 @@ export default function AboutPage() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-10">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-brand-navy mb-2">
-              {dict.about.team.title}
-            </h2>
-            <p className="text-muted-foreground">{dict.about.team.subtitle}</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamRoles.map((member) => (
-              <Card key={member.id} className="overflow-hidden hover:shadow-md transition-shadow">
-                <div className="aspect-square bg-muted">
-                  <Image
-                    src={member.image}
-                    alt={member.role}
-                    width={400}
-                    height={400}
-                    className="object-cover w-full h-full"
-                    loading="lazy"
-                  />
-                </div>
-                <CardContent className="p-4">
-                  <h3 className="font-heading text-base font-semibold text-brand-navy">
-                    {member.role}
-                  </h3>
-                  <p className="text-xs text-muted-foreground line-clamp-3 mt-2">{member.bio}</p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
