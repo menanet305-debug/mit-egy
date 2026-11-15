@@ -67,3 +67,4 @@ download/*.tar.gz
 
 # Agent environment — not needed for deployment
 skills/
+upload/
