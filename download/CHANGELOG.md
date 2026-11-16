@@ -1,5 +1,43 @@
 # MIT.egy — سجل التغييرات
 
+## الإصدار v2026-11-16 (16 نوفمبر 2026) — إصلاحات النشر
+
+إصلاح المشاكل التي منعت نشر الموقع بنجاح. الـ commit الأخير `027576a`.
+
+### ملخّص الإصلاحات
+
+1. **`next.config.ts`: تسجيل `images.qualities: [75, 80]`**
+   - كان Next.js 16 يرفض `quality={80}` على صورة الـ Hero لأنها ليست في القائمة المُهيّأة
+   - هذا التحذير كان قد يتحوّل لخطأ يمنع النشر على بيئات الإنتاج الصارمة (مثل Vercel)
+
+2. **`.env`: استبدال المتغيرات غير المستخدمة بالمتغيرات المطلوبة فعليًا**
+   - كان `.env` يحتوي على `DATABASE_URL` (لا توجد قاعدة بيانات في الكود)
+   - أُضيفت المتغيرات الحقيقية: `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `CONTACT_TO_EMAIL`, `NEXT_PUBLIC_SITE_URL`, `ALLOWED_ORIGINS`
+   - `.env` يبقى مُتجاهَلًا من git (كما يجب)؛ يجب تعيين هذه القيم على منصّة النشر
+
+3. **`Hero.tsx`: إضافة `loading="eager"` لصورة LCP**
+   - أزال تحذير Next.js عن Largest Contentful Paint على صورة الخلفية
+
+### التحقق
+
+- `bun run lint`: نظيف
+- `npx tsc --noEmit`: نظيف
+- `bun run build`: نجح بـ 14 صفحة، **بدون أي تحذيرات أو أخطاء**
+- `bun .next/standalone/server.js` على المنفذ 3002: HTTP 200 على `/` و`/about`
+
+### ملاحظة لمن ينشر الموقع
+
+عند النشر على Vercel أو أي منصّة، عيّن متغيرات البيئة التالية في إعدادات المشروع:
+```
+RESEND_API_KEY=<مفتاح حقيقي من resend.com>
+RESEND_FROM_EMAIL=onboarding@resend.dev  (أو بريد نطاقك المُوثّق)
+CONTACT_TO_EMAIL=menanet305@gmail.com
+NEXT_PUBLIC_SITE_URL=https://mit-egy.vercel.app
+ALLOWED_ORIGINS=https://mit-egy.vercel.app
+```
+
+---
+
 ## الإصدار v2026-11-15 (15 نوفمبر 2026)
 
 لقطة نهائية لجلسة تعديل المحتوى. شجرة العمل نظيفة، والـ commit الأخير `7dadd84`.
