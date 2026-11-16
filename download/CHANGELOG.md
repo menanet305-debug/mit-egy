@@ -1,5 +1,56 @@
 # MIT.egy — سجل التغييرات
 
+## الإصدار v2026-11-16-deploy-fix (16 نوفمبر 2026) — إصلاح فشل النشر على Vercel
+
+الـ commit الأخير `60f0671`. البناء محليًا: EXIT_CODE=0، 14 صفحة، لا standalone folder.
+
+### الأسباب الجذرية لفشل النشر
+
+1. **سكربت `build` مخصّص للاستضافة الذاتية** — كان ينفّذ `next build && cp -r .next/static ... && cp -r public ...` لجمع حزمة standalone. على Vercel (التي تدير الخادم بنفسها) هذه الخطوات غير ضرورية وتُربك بيئة البناء.
+2. **`output: "standalone"` مُصلّب في `next.config.ts`** — يُجبر كل بناء على وضع standalone غير الضروري على المنصات المُدارة.
+3. **`NODE_ENV=development` مُصلّب في `.env` و`.env.example`** — يتجاوز إعداد Vercel للإنتاج ويُحمّل ترويسات CSP المُرخّصة للتطوير في وقت التشغيل.
+
+### الإصلاحات
+
+| الملف | التغيير |
+|---|---|
+| `package.json` | `build` أصبح `next build` فقط. أُضيف `build:standalone` للاستضافة الذاتية. `start` أصبح `next start`، مع `start:standalone` لـ Docker/VPS. |
+| `next.config.ts` | `output: "standalone"` أصبح مشروطًا بمتغير `STANDALONE=true` (افتراضي: مُعطّل). |
+| `.env` + `.env.example` | حُذف `NODE_ENV=development` مع توضيح أن Next.js/المنصة تُعيّنه تلقائيًا. |
+
+### التحقق
+
+- `bun run build`: EXIT_CODE=0، 14 صفحة ثابتة/ديناميكية ✓
+- `bun run lint`: نظيف ✓
+- لا يُولّد مجلد `.next/standalone` بعد الإصلاح ✓
+- خادم الإنتاج اختُبر سابقًا (المنفذ 3001): كل الصفحات 200 وترويسات CSP صحيحة ✓
+
+### ملفات النشر في `download/`
+
+| الملف | الحجم | الوصف |
+|---|---|---|
+| `mit-egy.bundle` | ~4.4 MB | git bundle يحتوي التاريخ الكامل + العلامة `v2026-11-16-deploy-fix` |
+| `mit-egy-source.tar.gz` | ~290 KB | الكود المصدري (بدون node_modules / .next / .git / .env) |
+| `CHANGELOG.md` | — | هذا الملف |
+
+### كيفية النشر على Vercel بعد الإصلاح
+
+```bash
+# على Vercel: لا حاجة لأي إعداد خاص
+# - Build Command: يُترك افتراضي (next build)
+# - Output Directory: يُترك افتراضي (.next)
+# - لا تُضف STANDALONE=true إلا إذا كنت تستضيف ذاتيًا
+```
+
+### للاستضافة الذاتية (Docker/VPS) فقط
+
+```bash
+STANDALONE=true bun run build:standalone
+bun run start:standalone
+```
+
+---
+
 ## الإصدار v2026-11-16 (16 نوفمبر 2026) — إصلاحات النشر
 
 إصلاح المشاكل التي منعت نشر الموقع بنجاح. الـ commit الأخير `027576a`.
