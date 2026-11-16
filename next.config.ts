@@ -48,9 +48,12 @@ const devHeaders = [
 ];
 
 const isDev = process.env.NODE_ENV !== "production";
+// Standalone output is only needed for self-hosting (Docker/VPS). On Vercel and
+// similar managed platforms it is unnecessary and can confuse the build pipeline.
+const isStandalone = process.env.STANDALONE === "true";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  ...(isStandalone ? { output: "standalone" as const } : {}),
   reactStrictMode: false,
   typescript: {
     ignoreBuildErrors: false,
