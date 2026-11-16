@@ -55,6 +55,7 @@ export function Hero() {
           alt="" /* decorative: the section text carries the meaning */
           fill
           priority
+          loading="eager"
           sizes="100vw"
           quality={80}
           className="h-full w-full object-cover"

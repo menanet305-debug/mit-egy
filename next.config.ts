@@ -58,6 +58,7 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["*.space-z.ai", "*.chatglm.cn", "*.vercel.app", "localhost"],
   images: {
     formats: ["image/avif", "image/webp"],
+    qualities: [75, 80],
     remotePatterns: [
       {
         protocol: "https",
